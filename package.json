@@ -33,7 +33,7 @@
   },
   "lint-staged": {
     "src/**/*.{js,astro}": "eslint --ext .js,.astro src",
-    "src/**/*.{css,astro}": "npm run stylelint",
+    "src/**/*.{css,astro}": "npx stylelint '**/*.astro' --fix",
     "**/*": "prettier --write --ignore-unknown"
   }
 }
