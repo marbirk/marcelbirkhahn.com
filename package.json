@@ -8,7 +8,9 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint": "eslint --ext .js,.astro src",
+    "style": "prettier --write {src,test}/**/* ./*.{json,*.json} !package-lock.json -u --no-error-on-unmatched-pattern"
   },
   "dependencies": {
     "@astrojs/check": "^0.3.1",
@@ -16,11 +18,16 @@
     "typescript": "^5.2.2"
   },
   "devDependencies": {
+    "@typescript-eslint/parser": "^6.10.0",
+    "eslint": "^8.53.0",
+    "eslint-plugin-astro": "^0.29.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.0.2",
     "prettier": "3.0.3"
   },
   "lint-staged": {
+    "src/**/*.{js,astro}": "eslint --ext .js,.astro src",
     "**/*": "prettier --write --ignore-unknown"
   }
 }
