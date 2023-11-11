@@ -34,6 +34,7 @@
     "stylelint-config-standard": "^34.0.0"
   },
   "lint-staged": {
+    "src/**/*.{js,astro}": "eslint --ext .js,.astro src",
     "src/**/*.{css,astro}": "npx stylelint '**/*.astro' --fix",
     "**/*": "prettier --write --ignore-unknown"
   }
