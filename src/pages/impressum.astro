@@ -1,9 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const title = "Impressum";
 ---
 
-<Layout title="Portfolio">
+<Layout title={title}>
   <main class="flex justify-center">
-    <h1 class="text-4xl">Hi, I'm Marcel Birkhahn</h1>
+    <h1 class="text-4xl">{title}</h1>
   </main>
 </Layout>
